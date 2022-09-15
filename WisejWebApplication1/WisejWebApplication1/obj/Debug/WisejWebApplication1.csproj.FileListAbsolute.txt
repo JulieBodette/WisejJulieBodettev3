@@ -41,3 +41,4 @@ C:\Users\epicpython\Documents\GitHub\WisejJulieBodettev3\WisejWebApplication1\Wi
 C:\Users\epicpython\Documents\GitHub\WisejJulieBodettev3\WisejWebApplication1\WisejWebApplication1\bin\System.Data.SQLite.dll
 C:\Users\epicpython\Documents\GitHub\WisejJulieBodettev3\WisejWebApplication1\WisejWebApplication1\bin\System.Data.SQLite.EF6.dll
 C:\Users\epicpython\Documents\GitHub\WisejJulieBodettev3\WisejWebApplication1\WisejWebApplication1\bin\System.Data.SQLite.Linq.dll
+C:\Users\epicpython\Documents\GitHub\WisejJulieBodettev3\WisejWebApplication1\WisejWebApplication1\obj\Debug\WisejWebApplication1.Properties.Resources.resources
