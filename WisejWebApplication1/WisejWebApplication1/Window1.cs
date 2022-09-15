@@ -24,37 +24,33 @@ namespace WisejWebApplication1
 
             //NOTE: myConnection is just a SQLiteConnection we created in the constructor of the databaseObject
             //you could do this without creating a databaseObject- just create the SQLiteConnection myConnection
+            //OpenConnection() and CloseCOnnection() are also functions we created in the databaseObject
 
 
-            //if the connection is not already open
-            if (databaseObject.myConnection.State != System.Data.ConnectionState.Open)
-            {
-                //open a connection to the database
-                databaseObject.myConnection.Open();
-            }
+            
 
             //SQL query to insert data into the database
             string query = "INSERT INTO Organizations ('Name', 'Street', 'Zip', 'City', 'Country') VALUES (@Name, @Street, @Zip, @City, @Country)";
             SQLiteCommand myCommand = new SQLiteCommand(query, databaseObject.myConnection); //send it the query and the SQLite connection
-            
+
+            //open the connection to the database
+            databaseObject.OpenConnection();
+
 
             //Here we tell the query what values to send in
-            myCommand.Parameters.AddWithValue("@Name", "Company Name Here");
-            myCommand.Parameters.AddWithValue("@Street", "Street Name Here");
-            myCommand.Parameters.AddWithValue("@Zip", 0);
-            myCommand.Parameters.AddWithValue("@City", "City Name Here");
-            myCommand.Parameters.AddWithValue("@Country", "Country Name Here");
+            myCommand.Parameters.AddWithValue("@Name", "Company Name2 Here");
+            myCommand.Parameters.AddWithValue("@Street", "Street Name2 Here");
+            myCommand.Parameters.AddWithValue("@Zip", 22);
+            myCommand.Parameters.AddWithValue("@City", "City Name Here2");
+            myCommand.Parameters.AddWithValue("@Country", "Country Name Here2");
 
             //execute the query
             myCommand.ExecuteNonQuery(); //this returns an integer- the number of rows affected in the database
             //you could store it in a variable if you wanted to
 
-            //if connection is not closed
-            if (databaseObject.myConnection.State != System.Data.ConnectionState.Closed)
-            {
-                //close the connection
-                databaseObject.myConnection.Close();
-            }
+
+            //close the connection to the database
+            databaseObject.CloseConnection();
 
         }
 
