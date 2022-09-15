@@ -40,6 +40,7 @@
             this.typedTextBox3 = new Wisej.Web.TypedTextBox();
             this.typedTextBox4 = new Wisej.Web.TypedTextBox();
             this.typedTextBox5 = new Wisej.Web.TypedTextBox();
+            this.button1 = new Wisej.Web.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -173,11 +174,21 @@
             this.typedTextBox5.TabIndex = 9;
             this.typedTextBox5.ValueType = typeof(string);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(535, 98);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 27);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Add to Database";
+            this.button1.MouseClick += new Wisej.Web.MouseEventHandler(this.button1_MouseClick);
+            // 
             // Window1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = Wisej.Web.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 432);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Window1";
@@ -204,6 +215,7 @@
         private Wisej.Web.TypedTextBox typedTextBox3;
         private Wisej.Web.TypedTextBox typedTextBox2;
         private Wisej.Web.TypedTextBox typedTextBox1;
+        private Wisej.Web.Button button1;
     }
 }
 

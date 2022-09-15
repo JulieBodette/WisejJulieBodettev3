@@ -17,5 +17,11 @@ namespace WisejWebApplication1
             OrganizationList.Add(new Organization() { Name = "examplecompany", City = "Cleveland", Street = "101 Example Ave", Country = "USA", Zip = 44142 });
             dataGridView1.DataSource = OrganizationList;//connect the data list to the grid on the UI
         }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrganizationList.Add(new Organization() { Name = "examplecompany", City = "Cleveland", Street = "101 Example Ave", Country = "USA", Zip = 44142 });
+            AlertBox.Show("you added something to the database");
+        }
     }
 }
