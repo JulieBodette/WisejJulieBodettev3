@@ -35,8 +35,8 @@ namespace WisejWebApplication1
             {
                 while(result.Read()) //do this for each row
                 {
-                    AlertBox.Show((result["Name"]).ToString());
-                    OrganizationList.Add(new Organization() { Name = (result["Name"]).ToString(), City = (result["City"]).ToString(), Street = (result["Street"]).ToString(), Country = (result["Country"]).ToString(), Zip = 12 });
+                    int zipcode = Int32.Parse((result["Zip"]).ToString());
+                    OrganizationList.Add(new Organization() { Name = (result["Name"]).ToString(), City = (result["City"]).ToString(), Street = (result["Street"]).ToString(), Country = (result["Country"]).ToString(), Zip = zipcode });
                 }
             }
             //close the connection to the database
