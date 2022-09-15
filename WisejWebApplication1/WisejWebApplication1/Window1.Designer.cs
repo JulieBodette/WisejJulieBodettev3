@@ -47,8 +47,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new Wisej.Web.ColumnStyle(Wisej.Web.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new Wisej.Web.ColumnStyle(Wisej.Web.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new Wisej.Web.ColumnStyle(Wisej.Web.SizeType.Percent, 13.47F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new Wisej.Web.ColumnStyle(Wisej.Web.SizeType.Percent, 86.53F));
             this.tableLayoutPanel1.Controls.Add(this.typedTextBox5, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.typedTextBox4, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.typedTextBox3, 1, 2);
@@ -67,7 +67,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new Wisej.Web.RowStyle(Wisej.Web.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new Wisej.Web.RowStyle(Wisej.Web.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new Wisej.Web.RowStyle(Wisej.Web.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(401, 131);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(408, 131);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label5
@@ -75,7 +75,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 103);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 15);
+            this.label5.Size = new System.Drawing.Size(48, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Country";
             // 
@@ -118,48 +118,58 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = Wisej.Web.AnchorStyles.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 207);
+            this.dataGridView1.Location = new System.Drawing.Point(83, 207);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(412, 171);
+            this.dataGridView1.Size = new System.Drawing.Size(566, 171);
             this.dataGridView1.TabIndex = 3;
             // 
             // typedTextBox1
             // 
-            this.typedTextBox1.Location = new System.Drawing.Point(203, 3);
+            this.typedTextBox1.Anchor = ((Wisej.Web.AnchorStyles)(((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Left) 
+            | Wisej.Web.AnchorStyles.Right)));
+            this.typedTextBox1.Location = new System.Drawing.Point(57, 3);
             this.typedTextBox1.Name = "typedTextBox1";
-            this.typedTextBox1.Size = new System.Drawing.Size(100, 19);
+            this.typedTextBox1.Size = new System.Drawing.Size(348, 19);
             this.typedTextBox1.TabIndex = 5;
             this.typedTextBox1.ValueType = typeof(string);
             // 
             // typedTextBox2
             // 
-            this.typedTextBox2.Location = new System.Drawing.Point(203, 28);
+            this.typedTextBox2.Anchor = ((Wisej.Web.AnchorStyles)(((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Left) 
+            | Wisej.Web.AnchorStyles.Right)));
+            this.typedTextBox2.Location = new System.Drawing.Point(57, 28);
             this.typedTextBox2.Name = "typedTextBox2";
-            this.typedTextBox2.Size = new System.Drawing.Size(100, 19);
+            this.typedTextBox2.Size = new System.Drawing.Size(348, 19);
             this.typedTextBox2.TabIndex = 6;
             this.typedTextBox2.ValueType = typeof(string);
             // 
             // typedTextBox3
             // 
-            this.typedTextBox3.Location = new System.Drawing.Point(203, 53);
+            this.typedTextBox3.Anchor = ((Wisej.Web.AnchorStyles)(((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Left) 
+            | Wisej.Web.AnchorStyles.Right)));
+            this.typedTextBox3.Location = new System.Drawing.Point(57, 53);
             this.typedTextBox3.Name = "typedTextBox3";
-            this.typedTextBox3.Size = new System.Drawing.Size(100, 19);
+            this.typedTextBox3.Size = new System.Drawing.Size(348, 19);
             this.typedTextBox3.TabIndex = 7;
             this.typedTextBox3.ValueType = typeof(string);
             // 
             // typedTextBox4
             // 
-            this.typedTextBox4.Location = new System.Drawing.Point(203, 78);
+            this.typedTextBox4.Anchor = ((Wisej.Web.AnchorStyles)(((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Left) 
+            | Wisej.Web.AnchorStyles.Right)));
+            this.typedTextBox4.Location = new System.Drawing.Point(57, 78);
             this.typedTextBox4.Name = "typedTextBox4";
-            this.typedTextBox4.Size = new System.Drawing.Size(100, 19);
+            this.typedTextBox4.Size = new System.Drawing.Size(348, 19);
             this.typedTextBox4.TabIndex = 8;
             this.typedTextBox4.ValueType = typeof(string);
             // 
             // typedTextBox5
             // 
-            this.typedTextBox5.Location = new System.Drawing.Point(203, 103);
+            this.typedTextBox5.Anchor = ((Wisej.Web.AnchorStyles)(((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Left) 
+            | Wisej.Web.AnchorStyles.Right)));
+            this.typedTextBox5.Location = new System.Drawing.Point(57, 103);
             this.typedTextBox5.Name = "typedTextBox5";
-            this.typedTextBox5.Size = new System.Drawing.Size(100, 22);
+            this.typedTextBox5.Size = new System.Drawing.Size(348, 22);
             this.typedTextBox5.TabIndex = 9;
             this.typedTextBox5.ValueType = typeof(string);
             // 
@@ -167,11 +177,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = Wisej.Web.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 432);
+            this.ClientSize = new System.Drawing.Size(776, 432);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Window1";
             this.Text = "Window1";
+            this.Load += new System.EventHandler(this.Window1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
