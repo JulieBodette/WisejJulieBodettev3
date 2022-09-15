@@ -38,14 +38,14 @@ namespace WisejWebApplication1
 
 
             //Here we tell the query what values to send in
-            myCommand.Parameters.AddWithValue("@Name", "Company Name2 Here");
+            myCommand.Parameters.AddWithValue("@Name", "Company Name3 Here");
             myCommand.Parameters.AddWithValue("@Street", "Street Name2 Here");
-            myCommand.Parameters.AddWithValue("@Zip", 22);
+            myCommand.Parameters.AddWithValue("@Zip", 33);
             myCommand.Parameters.AddWithValue("@City", "City Name Here2");
             myCommand.Parameters.AddWithValue("@Country", "Country Name Here2");
 
             //execute the query
-            myCommand.ExecuteNonQuery(); //this returns an integer- the number of rows affected in the database
+           // myCommand.ExecuteNonQuery(); //this returns an integer- the number of rows affected in the database
             //you could store it in a variable if you wanted to
 
 
@@ -56,18 +56,25 @@ namespace WisejWebApplication1
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
+            int zipcode = 0;
             try
             {
                 //this converts the text in the Zip box to an integer
-                OrganizationList.Add(new Organization() { Name = typedTextBox1.Text, Street = typedTextBox2.Text, Zip = int.Parse(typedTextBox3.Text), City = typedTextBox4.Text, Country = typedTextBox5.Text });
+                zipcode = int.Parse(typedTextBox3.Text);
+                OrganizationList.Add(new Organization() { Name = typedTextBox1.Text, Street = typedTextBox2.Text, Zip = zipcode, City = typedTextBox4.Text, Country = typedTextBox5.Text });
                 AlertBox.Show("You added an organization to the database");
 
                 //add code to also write the data to a sql database
                 //backup plan in case i cannot writethe OrganizationList directly
             }
-            catch //show alert if zip code is invalid
+            catch(System.FormatException) //show alert if zip code is invalid
             {
                 AlertBox.Show("Please enter a number for the zip code");
+            }
+            catch
+            {
+                AlertBox.Show("An error ocurred and your organization was not added to the database");
+
             }
             
         }
