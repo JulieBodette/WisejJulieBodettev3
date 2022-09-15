@@ -17,7 +17,7 @@ namespace WisejWebApplication1
             if (!File.Exists("./database.sqlite3"))
             {
                 SQLiteConnection.CreateFile("database.sqlite3"); //creates the database
-                AlertBox.Show("Database created");
+                AlertBox.Show("New Sqlite Database created");
             }
 
         }
