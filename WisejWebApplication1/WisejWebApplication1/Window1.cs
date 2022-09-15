@@ -25,7 +25,23 @@ namespace WisejWebApplication1
 
         private void Window1_Load(object sender, EventArgs e)
         {
-            OrganizationList.Add(new Organization() { Name = "examplecompany", City = "Cleveland", Street = "101 Example Ave", Country = "USA", Zip = 44142 });
+            //read data from the sqlite server into the OrganizationList BindingList
+            //SELECT FROM DATABASE
+            string query = "SELECT * FROM Organizations";
+            SQLiteCommand myCommand = new SQLiteCommand(query, databaseObject.myConnection); //send it the query and the SQLite connection
+            databaseObject.OpenConnection(); //open the connection to the database
+            SQLiteDataReader result = myCommand.ExecuteReader(); //execute the query. this returns a SQLiteDataReader
+            if(result.HasRows)
+            {
+                while(result.Read()) //do this for each row
+                {
+                    AlertBox.Show((result["Name"]).ToString());
+                    OrganizationList.Add(new Organization() { Name = (result["Name"]).ToString(), City = (result["City"]).ToString(), Street = (result["Street"]).ToString(), Country = (result["Country"]).ToString(), Zip = 12 });
+                }
+            }
+            //close the connection to the database
+            databaseObject.CloseConnection();
+
             dataGridView1.DataSource = OrganizationList;//connect the data list to the grid on the UI
 
         }
@@ -56,7 +72,7 @@ namespace WisejWebApplication1
                 myCommand.Parameters.AddWithValue("@City", typedTextBox4.Text);
                 myCommand.Parameters.AddWithValue("@Country", typedTextBox5.Text);
 
-                //execute the query
+                //execute the query. NonQuery because we are writing to, not reading from, the database
                 myCommand.ExecuteNonQuery(); //this returns an integer- the number of rows affected in the database
                                              //you could store it in a variable if you wanted to
 
