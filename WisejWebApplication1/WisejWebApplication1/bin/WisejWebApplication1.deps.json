@@ -38,6 +38,7 @@
     ".NETFramework,Version=v4.8": {
       "WisejWebApplication1/1.0.0": {
         "dependencies": {
+          "System.Data.SQLite": "1.0.116",
           "System.Data.SqlClient": "4.8.3",
           "Wisej-3": "3.1.1",
           "Microsoft.CSharp": "4.0.0.0",
@@ -52,7 +53,8 @@
           "System.Windows.Forms": "4.0.0.0",
           "System.Xml": "4.0.0.0",
           "System.Xml.Linq": "4.0.0.0",
-          "mscorlib": "4.0.0.0"
+          "mscorlib": "4.0.0.0",
+          "System.ComponentModel.DataAnnotations": "4.0.0.0"
         },
         "compile": {
           "WisejWebApplication1.dll": {}
@@ -123,9 +125,50 @@
           ".NETFramework/v4.8/mscorlib.dll": {}
         }
       },
+      "System.ComponentModel.DataAnnotations/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.8/System.ComponentModel.DataAnnotations.dll": {}
+        }
+      },
+      "EntityFramework/6.4.4": {
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Stub.System.Data.SQLite.Core.NetFramework/1.0.116": {
+        "compile": {
+          "lib/net46/System.Data.SQLite.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "compile": {
           "ref/net461/System.Data.SqlClient.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.116": {
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.116",
+          "System.Data.SQLite.EF6": "1.0.116",
+          "System.Data.SQLite.Linq": "1.0.116"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.116": {
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetFramework": "1.0.116"
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.116": {
+        "dependencies": {
+          "EntityFramework": "6.4.4"
+        },
+        "compile": {
+          "lib/net46/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.116": {
+        "compile": {
+          "lib/net46/System.Data.SQLite.Linq.dll": {}
         }
       },
       "Wisej-3/3.1.1": {
@@ -137,6 +180,7 @@
     ".NETFramework,Version=v4.8/": {
       "WisejWebApplication1/1.0.0": {
         "dependencies": {
+          "System.Data.SQLite": "1.0.116",
           "System.Data.SqlClient": "4.8.3",
           "Wisej-3": "3.1.1",
           "Microsoft.CSharp": "4.0.0.0",
@@ -151,15 +195,52 @@
           "System.Windows.Forms": "4.0.0.0",
           "System.Xml": "4.0.0.0",
           "System.Xml.Linq": "4.0.0.0",
-          "mscorlib": "4.0.0.0"
+          "mscorlib": "4.0.0.0",
+          "System.ComponentModel.DataAnnotations": "4.0.0.0"
         },
         "runtime": {
           "WisejWebApplication1.dll": {}
         }
       },
+      "EntityFramework/6.4.4": {
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Stub.System.Data.SQLite.Core.NetFramework/1.0.116": {
+        "runtime": {
+          "lib/net46/System.Data.SQLite.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "runtime": {
           "lib/net461/System.Data.SqlClient.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.116": {
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.116",
+          "System.Data.SQLite.EF6": "1.0.116",
+          "System.Data.SQLite.Linq": "1.0.116"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.116": {
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetFramework": "1.0.116"
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.116": {
+        "dependencies": {
+          "EntityFramework": "6.4.4"
+        },
+        "runtime": {
+          "lib/net46/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.116": {
+        "runtime": {
+          "lib/net46/System.Data.SQLite.Linq.dll": {}
         }
       },
       "Wisej-3/3.1.1": {
@@ -195,12 +276,54 @@
       "serviceable": false,
       "sha512": ""
     },
+    "EntityFramework/6.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yj1+/4tci7Panu3jKDHYizxwVm0Jvm7b7m057b5h4u8NUHGCR8WIWirBTw+8EptRffwftIWPBeIRGNKD1ewEMQ==",
+      "path": "entityframework/6.4.4",
+      "hashPath": "entityframework.6.4.4.nupkg.sha512"
+    },
+    "Stub.System.Data.SQLite.Core.NetFramework/1.0.116": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wIGWCPYwxEXJZSkIzXePu06uiyhADuNdo9mYRjDlhIY/YvScadeSnflle2UqgFrhGnsX4pPAAe08zkl9kjIyRw==",
+      "path": "stub.system.data.sqlite.core.netframework/1.0.116",
+      "hashPath": "stub.system.data.sqlite.core.netframework.1.0.116.nupkg.sha512"
+    },
     "System.Data.SqlClient/4.8.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-yERfVLXAY0QbylAgaGLByYN0hFxX28aeEQ0hUgJO+Ntn1AfmWl5HHUoYJA0Yl9HhIUUJHVaS/Sw/RLZr5aaC+A==",
       "path": "system.data.sqlclient/4.8.3",
       "hashPath": "system.data.sqlclient.4.8.3.nupkg.sha512"
+    },
+    "System.Data.SQLite/1.0.116": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ykbwLhE8ejsQKMGb1xUCVsbMboNG1BWEr88fdxCW6t3yoIFqGpYpkSpskXw7IACveAFf7FDNuYRSqNIqBlZFMg==",
+      "path": "system.data.sqlite/1.0.116",
+      "hashPath": "system.data.sqlite.1.0.116.nupkg.sha512"
+    },
+    "System.Data.SQLite.Core/1.0.116": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-djwmo97syWCpUPJbDS0e2qUFUa8cDLeIfMotVkaRkAC5gpfBSZLMzvoLkLp1prY8waAuH1jEC3wcB2ymVVQWtA==",
+      "path": "system.data.sqlite.core/1.0.116",
+      "hashPath": "system.data.sqlite.core.1.0.116.nupkg.sha512"
+    },
+    "System.Data.SQLite.EF6/1.0.116": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oWkl3W9ZKb4oiS4mFd363qK317t/l5KyM3dmj7BD+eW7Qji8Oid5L4Tn+OshQrgY7xNpG4Ga9NUZVXyF91qXAA==",
+      "path": "system.data.sqlite.ef6/1.0.116",
+      "hashPath": "system.data.sqlite.ef6.1.0.116.nupkg.sha512"
+    },
+    "System.Data.SQLite.Linq/1.0.116": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-chSy8+xdCkyMH47BvggLb4fZwkd+/ZqBG14WFbXoURgqfpS+8qVdc/0ASoZbsPjNBWSoEsEfKPqfMCY08MvEMg==",
+      "path": "system.data.sqlite.linq/1.0.116",
+      "hashPath": "system.data.sqlite.linq.1.0.116.nupkg.sha512"
     },
     "Wisej-3/3.1.1": {
       "type": "package",
@@ -270,6 +393,11 @@
       "sha512": ""
     },
     "mscorlib/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.ComponentModel.DataAnnotations/4.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
