@@ -20,8 +20,16 @@ namespace WisejWebApplication1
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            OrganizationList.Add(new Organization() { Name = typedTextBox1.Text, Street = typedTextBox2.Text, Zip = int.Parse(typedTextBox3.Text), City = typedTextBox4.Text, Country = typedTextBox5.Text});
-            AlertBox.Show("you added something to the database");
+            try
+            {
+                OrganizationList.Add(new Organization() { Name = typedTextBox1.Text, Street = typedTextBox2.Text, Zip = int.Parse(typedTextBox3.Text), City = typedTextBox4.Text, Country = typedTextBox5.Text });
+                AlertBox.Show("You added something to the database");
+            }
+            catch
+            {
+                AlertBox.Show("Please enter a number for the zip code");
+            }
+            
         }
     }
 }
